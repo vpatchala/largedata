@@ -28,9 +28,9 @@ public class Largedata  {
 
     private String pdfparser() {
         try {
-        String folderPath = "~/Desktop/largedata/";
-        String fileName = "LargePdf.pdf";
-        File file = new File(folderPath + fileName);
+        String folderPath = "https://github.com/vpatchala/largedata/blob/main/LargePdf.pdf";
+        //String fileName = "LargePdf.pdf";
+        File file = new File(folderPath);
         
         PDDocument document = PDDocument.load(file);
         PDFTextStripper pdfStripper = new PDFTextStripper();
