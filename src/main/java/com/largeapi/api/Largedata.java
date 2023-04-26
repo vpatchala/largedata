@@ -31,7 +31,7 @@ public class Largedata  {
 
         StringBuilder sampleString = new StringBuilder();
         sampleString.append("a");
-        for ( int i =0;i<30;i++) {
+        for ( int i =0;i<25;i++) {
             sampleString.append(sampleString.toString());
         }
         return sampleString.toString();
