@@ -29,12 +29,22 @@ public class Largedata  {
 
     private String pdfparser() {
 
+        // StringBuilder sampleString = new StringBuilder();
+        // sampleString.append("a");
+        // for ( int i =0;i<19;i++) {
+        //     sampleString.append(sampleString.toString());
+        // }
+        // return sampleString.toString();
         StringBuilder sampleString = new StringBuilder();
+    
         sampleString.append("a");
         for ( int i =0;i<19;i++) {
             sampleString.append(sampleString.toString());
         }
-        return sampleString.toString();
+        return "{\"name\": \"" + sampleString + "\","+
+        " \"url\": \"https://www.example.com/support\"," +
+        " \"email\": \"support@example.com\"" +
+        "}";   
         // try {
         // String folderPath = "https://github.com/vpatchala/largedata/blob/main/LargePdf.pdf";
         // //String fileName = "LargePdf.pdf";
