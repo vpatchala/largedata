@@ -39,7 +39,7 @@ public class Largedata  {
             sampleString.append(sampleString.toString());
         }
         return Map.of("1", sampleString.toString().substring(8),
-        "2",((decimal)Encoding.Unicode.GetByteCount(str) / 1048576).toString());
+        "2",((ecimal)Encoding.Unicode.GetByteCount(sampleString) / 1048576).toString());
         // StringBuilder sampleString = new StringBuilder();
     
         // sampleString.append("a");
