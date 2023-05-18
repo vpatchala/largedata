@@ -38,8 +38,8 @@ public class Largedata  {
         for ( int i =0;i<23;i++) {
             sampleString.append(sampleString.toString());
         }
-        return Map.of("1", sampleString.toString(),
-        "2", sampleString.toString());
+        return Map.of("1", sampleString.toString().substring(8),
+        "2", sampleString.toString().substring(8));
         // StringBuilder sampleString = new StringBuilder();
     
         // sampleString.append("a");
