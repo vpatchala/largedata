@@ -13,7 +13,7 @@ import java.lang.*;
 public class Largedata  {
 
     @RequestMapping("/hello")
-    String hello() {
+    Map<String, String> hello() {
         //return "Hello from MyApp!";
         return pdfparser();
     }
@@ -27,14 +27,15 @@ public class Largedata  {
         SpringApplication.run(Largedata.class, args);
     }
 
-    private String pdfparser() {
+    private Map<String, String> pdfparser() {
 
         StringBuilder sampleString = new StringBuilder();
         sampleString.append("a");
         for ( int i =0;i<2;i++) {
             sampleString.append(sampleString.toString());
         }
-        return sampleString.toString();
+        return Map.of("1", sampleString.toString(),
+        "2", sampleString.toString());
         // StringBuilder sampleString = new StringBuilder();
     
         // sampleString.append("a");
