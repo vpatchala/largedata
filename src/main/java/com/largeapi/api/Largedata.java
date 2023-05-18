@@ -8,15 +8,18 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import java.lang.*;
 import java.util.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 @SpringBootApplication
 @RestController
 public class Largedata  {
 
     @RequestMapping("/hello")
-    Map<String, String> hello() {
+    String hello() {
+        Gson gson = new GsonBuilder().serializeNulls().create();
         //return "Hello from MyApp!";
-        return pdfparser();
+        return gson.toJson(pdfparser());
     }
 
     @RequestMapping("/echo")
