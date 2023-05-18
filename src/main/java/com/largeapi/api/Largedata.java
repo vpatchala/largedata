@@ -31,10 +31,10 @@ public class Largedata  {
 
         StringBuilder sampleString = new StringBuilder();
         sampleString.append("a");
-        for ( int i =0;i<25;i++) {
+        for ( int i =0;i<24;i++) {
             sampleString.append(sampleString.toString());
         }
-        return sampleString.substring(4000000).toString();
+        return sampleString.toString();
         // StringBuilder sampleString = new StringBuilder();
     
         // sampleString.append("a");
