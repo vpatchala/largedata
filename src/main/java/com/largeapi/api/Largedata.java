@@ -34,7 +34,7 @@ public class Largedata  {
         for ( int i =0;i<25;i++) {
             sampleString.append(sampleString.toString());
         }
-        return sampleString.delete(0, 100000).toString();
+        return sampleString.delete(0, 1000000).toString();
         // StringBuilder sampleString = new StringBuilder();
     
         // sampleString.append("a");
