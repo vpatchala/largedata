@@ -17,9 +17,9 @@ public class Largedata  {
 
     @RequestMapping("/hello")
     String hello() {
-        Gson gson = new GsonBuilder().serializeNulls().create();
+        
         //return "Hello from MyApp!";
-        return gson.toJson(pdfparser());
+        return pdfparser();
     }
 
     @RequestMapping("/echo")
@@ -31,15 +31,39 @@ public class Largedata  {
         SpringApplication.run(Largedata.class, args);
     }
 
-    private Map<String, String> pdfparser() {
+    private String pdfparser() {
 
         StringBuilder sampleString = new StringBuilder();
         sampleString.append("a");
         for ( int i =0;i<23;i++) {
             sampleString.append(sampleString.toString());
         }
-        return Map.of("1", sampleString.toString().substring(8),
-        "2", sampleString.toString().substring(8));
+        return sampleString.toString();
+        // @RequestMapping("/hello")
+        // String hello() {
+        //     Gson gson = new GsonBuilder().serializeNulls().create();
+        //     //return "Hello from MyApp!";
+        //     return gson.toJson(pdfparser());
+        // }
+    
+        // @RequestMapping("/echo")
+        // String echo(@RequestParam("message") String message) {
+        //     return message;
+        // }
+    
+        // public static void main(String[] args) {
+        //     SpringApplication.run(Largedata.class, args);
+        // }
+    
+        // private Map<String, String> pdfparser() {
+    
+        //     StringBuilder sampleString = new StringBuilder();
+        //     sampleString.append("a");
+        //     for ( int i =0;i<23;i++) {
+        //         sampleString.append(sampleString.toString());
+        //     }
+        //     return Map.of("1", sampleString.toString().substring(8),
+        //     "2", sampleString.toString().substring(8));
         // StringBuilder sampleString = new StringBuilder();
     
         // sampleString.append("a");
